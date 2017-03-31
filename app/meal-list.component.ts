@@ -5,6 +5,7 @@ import { Meal } from './meal.model';
   selector: 'meal-list',
   template: `
 
+<div class="list">
   <h3>Choose A Calorie Filter:</h3>
   <select (change)="onChange($event.target.value)">
     <option value="allMeals" selected="selected">All Meals</option>
@@ -15,6 +16,7 @@ import { Meal } from './meal.model';
   <ul>
     <li *ngFor="let currentMeal of childMealList | calorieFilter:filterByCalories">{{currentMeal.name}}<button (click)="editButtonHasBeenClicked(currentMeal)">Edit</button><button (click)='showMeal(currentMeal)'>Show Details</button></li>
   </ul>
+</div>
 
   <div *ngIf="showDetails" class="details">
     <h4 class="detail-title">{{showDetails.name}}</h4>

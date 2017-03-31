@@ -4,7 +4,7 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'new-meal',
   template: `
-    <div ng-show="addMeal" class="new-meal">
+    <div ng-show="addMeal" class="new-meal details-list">
       <h3 class="sub-title">Add A New Meal:</h3>
       <label>Name:</label>
       <input #newName class="form-control"><br>

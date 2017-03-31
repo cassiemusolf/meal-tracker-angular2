@@ -18,17 +18,14 @@ import { Meal } from './meal.model';
 <meal-list [childMealList]="masterMealList" (clickSender)="editMeal($event)"></meal-list><hr>
 </div>
 <div class="col-md-6">
-<new-meal (newMealSender)="addMeal($event)"></new-meal>
+<new-meal (newMealSender)="addMeal($event)"></new-meal><hr>
 </div>
 </div>
 <div class="col-md-6">
 <edit-meal [childSelectedMeal]="selectedMeal" (doneButtonClickedSender)="finishedEditing()"></edit-meal>
-<div>
 </div>
   `
 })
-
-
 
 export class AppComponent {
 

@@ -29,8 +29,7 @@
   margin-bottom: 50px;
 }
 
-.new-meal {
-  /*border: 1px solid #ffd1b3;*/
+.edit-meal {
   background-color: #f2f2f2;
   box-shadow: 3px 3px 3px lightgrey;
   padding: 15px;
@@ -84,14 +83,23 @@ button {
   margin-bottom: 20px;
 }
 
+.details-list {
+  background-image: url("/resources/images/stone2.png");
+  background-size: cover;
+  padding: 50px;
+  font-weight: bold;
+}
+
 body {
   font-family: 'IM Fell French Canon', serif;
-  /*background-image: url("/resources/images/stone2.png");
-  background-repeat: no-repeat;
-  background-size: cover;*/
-  /*background-color: #ffe0cc;*/
 }
 
 .sub-title {
   margin-bottom: 20px;
+}
+
+.list {
+  background-color: #f2f2f2;
+  box-shadow: 3px 3px 3px lightgrey;
+  padding: 15px;
 }
