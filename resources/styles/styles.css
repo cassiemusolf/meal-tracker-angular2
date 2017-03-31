@@ -1,0 +1,17 @@
+.jumbotron {
+  background-image: url("/resources/images/computer.jpeg");
+  height: 400px;
+}
+
+.jumbotron h1 {
+  float: right;
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+}
+
+.navbar {
+  height: 80px;
+}

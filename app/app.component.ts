@@ -4,17 +4,27 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'app-root',
   template: `
+  <nav class="navbar navbar-light bg-faded">
+  <a class="navbar-brand" href="#">
+    <img src="/resources/images/icon.png" class="d-inline-block align-top icon" alt="">
+  </a>
+</nav>
+
   <div class="jumbotron">
     <h1>Meal Tracker</h1>
   </div>
-
+<div class="container">
 <meal-list [childMealList]="masterMealList" (clickSender)="editMeal($event)"></meal-list>
 
 <new-meal (newMealSender)="addMeal($event)"></new-meal>
 
 <edit-meal [childSelectedMeal]="selectedMeal" (doneButtonClickedSender)="finishedEditing()"></edit-meal>
+
+</div>
   `
 })
+
+
 
 export class AppComponent {
 
