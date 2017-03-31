@@ -49,3 +49,27 @@ li {
 button {
   margin-left: 10px;
 }
+
+.detail-title {
+  font-size: 35px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Give You Glory', cursive;
+}
+
+.details {
+  text-align: center;
+  border: black 1px solid;
+  margin-top: 50px;
+  background-color: lightgrey;
+}
+
+.detail-content {
+  margin: 15px;
+  font-size: 22px;
+}
+
+.details-button {
+  margin-bottom: 20px;
+}

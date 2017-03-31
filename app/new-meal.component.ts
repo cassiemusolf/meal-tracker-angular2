@@ -5,7 +5,7 @@ import { Meal } from './meal.model';
   selector: 'new-meal',
   template: `
     <div ng-show="addMeal" class="new-meal">
-      <h3>New Meal</h3>
+      <h3>Add A New Meal:</h3>
       <label>Name:</label>
       <input #newName class="form-control"><br>
       <label>Details:</label>

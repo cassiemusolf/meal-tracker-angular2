@@ -5,7 +5,7 @@ import { Meal } from './meal.model';
   selector: 'meal-list',
   template: `
 
-  <h3>Choose a Calorie Filter:</h3>
+  <h3>Choose A Calorie Filter:</h3>
   <select (change)="onChange($event.target.value)">
     <option value="allMeals" selected="selected">All Meals</option>
     <option value="lowCalorieMeals">Low Calorie Meals</option>
@@ -17,10 +17,10 @@ import { Meal } from './meal.model';
   </ul>
 
   <div *ngIf="showDetails" class="details">
-    <h4>{{showDetails.name}}</h4>
-    <h4>Details: {{showDetails.details}}</h4>
-    <h4>Calories: {{showDetails.calories}}</h4>
-    <button class="btn" (click)="hideDetails()">Hide Details</button>
+    <h4 class="detail-title">{{showDetails.name}}</h4>
+    <h4 class="detail-content">{{showDetails.details}}</h4>
+    <h4 class="detail-content"> {{showDetails.calories}} calories</h4>
+    <button class="btn details-button" (click)="hideDetails()">Hide Details</button>
   </div>
 
   `
