@@ -6,13 +6,13 @@ import { Meal } from './meal.model';
   template: `
     <div ng-show="addMeal" class="new-meal details-list">
       <h3 class="sub-title">Add A New Meal:</h3>
-      <label>Name:</label>
-      <input #newName class="form-control"><br>
-      <label>Details:</label>
-      <input #newDetails class="form-control"><br>
-      <label>Calories:</label>
-      <input #newCalories class="form-control"><br>
-      <button (click)="submitForm(newName.value, newDetails.value, newCalories.value); newName.value=''; newDetails.value=''; newCalories.value='';">Add</button>
+        <label>Name:</label>
+        <input #newName class="form-control"><br>
+        <label>Details:</label>
+        <input #newDetails class="form-control"><br>
+        <label>Calories:</label>
+        <input #newCalories class="form-control"><br>
+        <button (click)="submitForm(newName.value, newDetails.value, newCalories.value); newName.value=''; newDetails.value=''; newCalories.value='';">Add</button>
     </div>
   `
 })
