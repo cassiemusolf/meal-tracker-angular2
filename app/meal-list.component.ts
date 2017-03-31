@@ -12,8 +12,7 @@ import { Meal } from './meal.model';
   </select>
 
   <ul>
-    <li *ngFor="let currentMeal of childMealList | calorieFilter:filterByCalories">{{currentMeal.name}}<br>
-    {{currentMeal.details}}<br>{{currentMeal.calories}}<button class="btn" (click)="editButtonHasBeenClicked(currentMeal)">Edit</button></li>
+    <li *ngFor="let currentMeal of childMealList | calorieFilter:filterByCalories">{{currentMeal.name}}<button class="btn" (click)="editButtonHasBeenClicked(currentMeal)">Edit</button><button class="btn" (click)='showMeal(currentMeal)'>Show details</button></li>
   </ul>
 
   <div *ngIf="showDetails" class="details">
@@ -31,12 +30,22 @@ export class MealListComponent {
   @Output() clickSender = new EventEmitter();
 
   editButtonHasBeenClicked(clickedMeal: Meal) {
-  this.clickSender.emit(clickedMeal);
-}
+    this.clickSender.emit(clickedMeal);
+  }
 
-filterByCalories: string = "allMeals";
+  showDetails = null;
 
-onChange(optionFromMenu) {
-  this.filterByCalories = optionFromMenu;
+  showMeal(clickedMeal) {
+    this.showDetails = clickedMeal;
+  }
+
+  hideDetails() {
+    this.showDetails = null;
+  }
+
+  filterByCalories: string = "allMeals";
+
+  onChange(optionFromMenu) {
+    this.filterByCalories = optionFromMenu;
   }
 }

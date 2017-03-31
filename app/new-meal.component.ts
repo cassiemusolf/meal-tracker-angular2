@@ -7,11 +7,11 @@ import { Meal } from './meal.model';
     <div ng-show="addMeal">
       <h3>New Meal</h3>
       <label>Name:</label>
-      <input #newName>
+      <input #newName><br>
       <label>Details:</label>
-      <input #newDetails>
+      <input #newDetails><br>
       <label>Calories:</label>
-      <input #newCalories>
+      <input #newCalories><br>
       <button (click)="submitForm(newName.value, newDetails.value, newCalories.value); newName.value=''; newDetails.value=''; newCalories.value='';">Add</button>
     </div>
   `
