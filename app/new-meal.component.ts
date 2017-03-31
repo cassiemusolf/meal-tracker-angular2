@@ -4,14 +4,14 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'new-meal',
   template: `
-    <div ng-show="addMeal">
+    <div ng-show="addMeal" class="new-meal">
       <h3>New Meal</h3>
       <label>Name:</label>
-      <input #newName><br>
+      <input #newName class="form-control"><br>
       <label>Details:</label>
-      <input #newDetails><br>
+      <input #newDetails class="form-control"><br>
       <label>Calories:</label>
-      <input #newCalories><br>
+      <input #newCalories class="form-control"><br>
       <button (click)="submitForm(newName.value, newDetails.value, newCalories.value); newName.value=''; newDetails.value=''; newCalories.value='';">Add</button>
     </div>
   `
