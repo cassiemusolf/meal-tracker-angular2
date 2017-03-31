@@ -8,9 +8,9 @@ import { Meal } from './meal.model';
     <h1>Meal Tracker</h1>
   </div>
 
-<new-meal (newMealSender)="addMeal($event)"></new-meal>
-
 <meal-list [childMealList]="masterMealList" (clickSender)="editMeal($event)"></meal-list>
+
+<new-meal (newMealSender)="addMeal($event)"></new-meal>
 
 <edit-meal [childSelectedMeal]="selectedMeal" (doneButtonClickedSender)="finishedEditing()"></edit-meal>
 
@@ -38,5 +38,4 @@ export class AppComponent {
   addMeal(newMealFromChild: Meal) {
     this.masterMealList.push(newMealFromChild);
   }
-
 }
