@@ -8,11 +8,10 @@ import { Meal } from './meal.model';
   <a class="navbar-brand" href="#">
     <img src="/resources/images/icon.png" class="d-inline-block align-top icon" alt="">
   </a>
+  <h2 class="heading">Meal Tracker</h2>
 </nav>
 
-  <div class="jumbotron">
-    <h1>Meal Tracker</h1>
-  </div>
+<div class="jumbotron"></div>
 <div class="container">
 <meal-list [childMealList]="masterMealList" (clickSender)="editMeal($event)"></meal-list>
 

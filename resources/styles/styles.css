@@ -1,6 +1,8 @@
 .jumbotron {
-  background-image: url("/resources/images/computer.jpeg");
+  background-image: url("/resources/images/breakfast.jpg");
   height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .jumbotron h1 {
@@ -14,4 +16,12 @@
 
 .navbar {
   height: 80px;
+}
+
+.heading {
+  font-family: 'Give You Glory', cursive;
+  font-size: 50px;
+  margin-top: 30px;
+  margin-left: 25%;
+  margin-right: 20%;
 }
