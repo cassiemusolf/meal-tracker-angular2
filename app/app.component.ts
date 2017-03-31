@@ -13,7 +13,6 @@ import { Meal } from './meal.model';
 <new-meal (newMealSender)="addMeal($event)"></new-meal>
 
 <edit-meal [childSelectedMeal]="selectedMeal" (doneButtonClickedSender)="finishedEditing()"></edit-meal>
-
   `
 })
 
