@@ -13,14 +13,14 @@ import { Meal } from './meal.model';
   </select>
 
   <ul>
-    <li *ngFor="let currentMeal of childMealList | calorieFilter:filterByCalories">{{currentMeal.name}}<button class="btn" (click)="editButtonHasBeenClicked(currentMeal)">Edit</button><button class="btn" (click)='showMeal(currentMeal)'>Show details</button></li>
+    <li *ngFor="let currentMeal of childMealList | calorieFilter:filterByCalories">{{currentMeal.name}}<button (click)="editButtonHasBeenClicked(currentMeal)">Edit</button><button (click)='showMeal(currentMeal)'>Show Details</button></li>
   </ul>
 
   <div *ngIf="showDetails" class="details">
     <h4 class="detail-title">{{showDetails.name}}</h4>
     <h4 class="detail-content">{{showDetails.details}}</h4>
-    <h4 class="detail-content"> {{showDetails.calories}} calories</h4>
-    <button class="btn details-button" (click)="hideDetails()">Hide Details</button>
+    <h4 class="detail-content"> {{showDetails.calories}} Calories</h4>
+    <button class="details-button" (click)="hideDetails()">Hide Details</button>
   </div>
 
   `

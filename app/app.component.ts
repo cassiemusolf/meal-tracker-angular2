@@ -15,14 +15,15 @@ import { Meal } from './meal.model';
 <div class="container">
 <div class="row">
 <div class="col-md-6">
-<meal-list [childMealList]="masterMealList" (clickSender)="editMeal($event)"></meal-list>
+<meal-list [childMealList]="masterMealList" (clickSender)="editMeal($event)"></meal-list><hr>
 </div>
 <div class="col-md-6">
 <new-meal (newMealSender)="addMeal($event)"></new-meal>
 </div>
 </div>
+<div class="col-md-6">
 <edit-meal [childSelectedMeal]="selectedMeal" (doneButtonClickedSender)="finishedEditing()"></edit-meal>
-
+<div>
 </div>
   `
 })
