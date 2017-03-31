@@ -6,13 +6,13 @@ import { Meal } from './meal.model';
   template: `
 
   <select (change)="onChange($event.target.value)">
-    <option value="allMeals">All Meals</option>
-    <option value="lowCalorie">Low Calorie Meals</option>
-    <option value="highCalorie">High Calorie Meals</option>
+    <option value="allMeals" selected="selected">All Meals</option>
+    <option value="lowCalorieMeals">Low Calorie Meals</option>
+    <option value="highCalorieMeals">High Calorie Meals</option>
   </select>
 
   <ul>
-    <li *ngFor="let currentMeal of childMealList">{{currentMeal.name}}<br>
+    <li *ngFor="let currentMeal of childMealList | calorieFilter:filterByCalories">{{currentMeal.name}}<br>
     {{currentMeal.details}}<br>{{currentMeal.calories}}<button class="btn" (click)="editButtonHasBeenClicked(currentMeal)">Edit</button></li>
   </ul>
   `
@@ -30,6 +30,5 @@ filterByCalories: string = "allMeals";
 
 onChange(optionFromMenu) {
   this.filterByCalories = optionFromMenu;
-}
-
+  }
 }
